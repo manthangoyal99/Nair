@@ -1,0 +1,16 @@
+1.In precomputing stage basically pre determined snapshots are use to determine all the coefficients as they are dependent on the snapshot only.
+2.Shocks not like usual elliptical problems where more the basis better is the apprximation. Here use small number of basis corresponding to nearest samples snapshots
+3.L1 norm used for minimizing the generalised coefficients
+
+As the shock will occur at a different location the mesh is changed using transport variable
+
+** Nv are the snapshots near the u* snapshot and the fourier coeff(sigma) for all the Ns snapshots are trained such as to get coeff which are good for those Nv neighbouring snaps. As we calculate transported snapshots Nv and we also have the exact values and then e minimise the difference
+
+gibbs phenomenon
+
+e take a reference snapshot from the training data and shift(find the coefficients) it in such a way that it replicates the neighbouring snapshots 
+
+For now we wont worry about the bc at the bump and let there be small discrpancies 
+
+ROM part is needed to determine the coefficient of linear combination of the snapshots
+
